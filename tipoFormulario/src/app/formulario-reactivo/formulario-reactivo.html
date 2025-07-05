@@ -1,0 +1,9 @@
+ <h2>Formulario Reactivo</h2>
+    <form [formGroup]="form" (ngSubmit)="enviar()">
+      <label>Correo:</label>
+      <input type="email" formControlName="correo" />
+      <br />
+      <button type="submit" [disabled]="form.invalid">Enviar</button>
+    </form>
+
+    <p *ngIf="form.value.correo">Correo ingresado: {{ form.value.correo }}</p>

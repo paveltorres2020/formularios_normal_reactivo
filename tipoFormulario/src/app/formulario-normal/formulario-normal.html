@@ -1,0 +1,9 @@
+<h2>Formulario Template-driven</h2>
+    <form #form="ngForm" (ngSubmit)="enviar()">
+      <label>Nombre:</label>
+      <input type="text" name="nombre" [(ngModel)]="nombre" required />
+      <br />
+      <button type="submit">Enviar</button>
+    </form>
+
+    <p *@if="nombre">Nombre ingresado: {{ nombre }}</p>
